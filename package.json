@@ -1,0 +1,42 @@
+
+{
+  "name": "chatgpt-side-panel",
+  "displayName": "ChatGPT Side Panel",
+  "description": "An experimental ChatGPT panel for VS Code.",
+  "version": "0.1.0",
+  "publisher": "local-dev",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:chatgptSidePanel.view"
+  ],
+  "main": "./extension.js",
+
+  
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "chatgptSidePanel",
+          "title": "ChatGPT",
+          "icon": "media/chatgpt.svg"
+        }
+      ]
+    },
+    "views": {
+      "chatgptSidePanel": [
+        {
+          "id": "chatgptSidePanel.view",
+          "name": "ChatGPT",
+          "type": "webview"
+        }
+      ]
+    }
+  }
+
+
+}
